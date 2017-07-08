@@ -17,7 +17,7 @@ public class Consulta3 extends javax.swing.JPanel {
     private JLabel nombre;
 
     public Consulta3() {
-        nombre = new JLabel("Consulta 1:");
+        nombre = new JLabel("CONSULTA 3:");
         lista = new JList();
 
         panel = new JPanel(new BorderLayout());
@@ -39,9 +39,9 @@ public class Consulta3 extends javax.swing.JPanel {
             Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/" + database + "?", user, pass);
             Statement stmt = conn.createStatement();
 
-            ResultSet rs = stmt.executeQuery("SELECT ");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM C3");
             while (rs.next()) {
-                listModel.addElement(rs.getString(1) + " - " + rs.getString(2));
+                listModel.addElement(rs.getString(1) + " - " + rs.getString(2) + " - " + rs.getString(3));
             }
             stmt.close();
 

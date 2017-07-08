@@ -17,7 +17,7 @@ public class Consulta2 extends javax.swing.JPanel {
     private JLabel nombre;
 
     public Consulta2() {
-        nombre = new JLabel("Consulta 1:");
+        nombre = new JLabel("CONSULTA 2:");
         lista = new JList();
 
         panel = new JPanel(new BorderLayout());

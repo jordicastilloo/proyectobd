@@ -34,8 +34,8 @@ public class VentanaConsultas extends javax.swing.JFrame {
         c2 = new javax.swing.JButton();
         c3 = new javax.swing.JButton();
         c4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        c5 = new javax.swing.JButton();
+        c6 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         atras = new javax.swing.JButton();
 
@@ -71,9 +71,19 @@ public class VentanaConsultas extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setText("Consulta 5");
+        c5.setText("Consulta 5");
+        c5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c5ActionPerformed(evt);
+            }
+        });
 
-        jButton6.setText("Consulta 6");
+        c6.setText("Consulta 6");
+        c6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c6ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Open Sans", 1, 24)); // NOI18N
         jLabel1.setText("CONSULTAS");
@@ -94,8 +104,8 @@ public class VentanaConsultas extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(296, 296, 296)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton6)
-                            .addComponent(jButton5)
+                            .addComponent(c6)
+                            .addComponent(c5)
                             .addComponent(c4)
                             .addComponent(c2)
                             .addComponent(c1)
@@ -123,9 +133,9 @@ public class VentanaConsultas extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(c4)
                 .addGap(18, 18, 18)
-                .addComponent(jButton5)
+                .addComponent(c5)
                 .addGap(18, 18, 18)
-                .addComponent(jButton6)
+                .addComponent(c6)
                 .addGap(35, 35, 35)
                 .addComponent(atras)
                 .addGap(28, 28, 28))
@@ -180,8 +190,25 @@ public class VentanaConsultas extends javax.swing.JFrame {
         f.setSize(200, 300);    }//GEN-LAST:event_c2ActionPerformed
 
     private void c3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_c3ActionPerformed
+        Consulta3 p = new Consulta3();
+        JFrame f = new JFrame();
+        f.getContentPane().add(p);
+        f.setVisible(true);
+        f.setSize(200, 300);    }//GEN-LAST:event_c3ActionPerformed
+
+    private void c5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c5ActionPerformed
+        Consulta5 p = new Consulta5();
+        JFrame f = new JFrame();
+        f.getContentPane().add(p);
+        f.setVisible(true);
+        f.setSize(200, 300);    }//GEN-LAST:event_c5ActionPerformed
+
+    private void c6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c6ActionPerformed
+        Consulta6 p = new Consulta6();
+        JFrame f = new JFrame();
+        f.getContentPane().add(p);
+        f.setVisible(true);
+        f.setSize(200, 300);    }//GEN-LAST:event_c6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,8 +251,8 @@ public class VentanaConsultas extends javax.swing.JFrame {
     private javax.swing.JButton c2;
     private javax.swing.JButton c3;
     private javax.swing.JButton c4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton c5;
+    private javax.swing.JButton c6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

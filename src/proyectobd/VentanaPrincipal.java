@@ -85,6 +85,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Open Sans", 0, 10)); // NOI18N
         jLabel2.setText("CREADO POR JORDI CASTILLO.");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -129,7 +130,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .addComponent(CONSULTAS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(btnVj)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addContainerGap())
         );
@@ -188,7 +189,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         f.setSize(600, 450);    }//GEN-LAST:event_btnVjActionPerformed
 
     private void CONSULTASActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CONSULTASActionPerformed
-        // TODO add your handling code here:
+        VentanaConsultas vp = new VentanaConsultas();
+        vp.setVisible(true);
+        vp.setSize(700, 500);
+        vp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        dispose();
     }//GEN-LAST:event_CONSULTASActionPerformed
 
     /**

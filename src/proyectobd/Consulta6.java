@@ -17,7 +17,7 @@ public class Consulta6 extends javax.swing.JPanel {
     private JLabel nombre;
 
     public Consulta6() {
-        nombre = new JLabel("CONSULTA 4:");
+        nombre = new JLabel("CONSULTA 6:");
         lista = new JList();
 
         panel = new JPanel(new BorderLayout());
@@ -39,12 +39,12 @@ public class Consulta6 extends javax.swing.JPanel {
             Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/" + database + "?", user, pass);
             Statement stmt = conn.createStatement();
 
-            ResultSet rs = stmt.executeQuery("SELECT DESARROLLADOR\n"
-                    + "FROM VIDEOJUEGOS\n"
-                    + "GROUP BY DESARROLLADOR\n"
-                    + "HAVING COUNT(GENERO)>=2;");
+            ResultSet rs = stmt.executeQuery("SELECT V.NOM_CL, V.J_ARRENDADOS\n"
+                    + "FROM C6 V\n"
+                    + "WHERE V.J_ARRENDADOS=(SELECT MAX(V1.J_ARRENDADOS)\n"
+                    + "FROM C6 V1);");
             while (rs.next()) {
-                listModel.addElement(rs.getString(1));
+                listModel.addElement(rs.getString(1) + " - " + rs.getString(2));
             }
             stmt.close();
 

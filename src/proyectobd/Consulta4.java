@@ -40,9 +40,8 @@ public class Consulta4 extends javax.swing.JPanel {
             Statement stmt = conn.createStatement();
 
             ResultSet rs = stmt.executeQuery("SELECT DESARROLLADOR\n"
-                    + "FROM VIDEOJUEGOS\n"
-                    + "GROUP BY DESARROLLADOR\n"
-                    + "HAVING COUNT(GENERO)>=2;");
+                    + "FROM V4\n"
+                    + "WHERE contador_genero>=2;");
             while (rs.next()) {
                 listModel.addElement(rs.getString(1));
             }

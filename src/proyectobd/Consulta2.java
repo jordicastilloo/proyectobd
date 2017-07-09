@@ -41,7 +41,8 @@ public class Consulta2 extends javax.swing.JPanel {
 
             ResultSet rs = stmt.executeQuery("SELECT V.ID_VJ, V.TITULO\n"
                     + "FROM VIDEOJUEGOS V, COPIA C, ARRIENDA A, TIENEJUEGO T, SUCURSALES S, PERTENECE P\n"
-                    + "WHERE S.ID_SUC NOT IN\n"
+                    + "WHERE V.ID_VJ=C.ID_VJ AND C.ID_COPIA=A.ID_COPIA AND T.ID_SUC=S.ID_SUC\n"
+                    + "AND S.ID_SUC NOT IN\n"
                     + "(SELECT S1.ID_SUC\n"
                     + "FROM PERTENECE P1, CIUDAD C1, SUCURSALES S1\n"
                     + "WHERE S1.ID_SUC=C1.ID_SUC AND C1.COD_CIU=P1.COD_CIU)\n"

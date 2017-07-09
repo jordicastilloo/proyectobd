@@ -17,7 +17,7 @@ public class Consulta5 extends javax.swing.JPanel {
     private JLabel nombre;
 
     public Consulta5() {
-        nombre = new JLabel("CONSULTA 4:");
+        nombre = new JLabel("CONSULTA 5:");
         lista = new JList();
 
         panel = new JPanel(new BorderLayout());
@@ -39,12 +39,18 @@ public class Consulta5 extends javax.swing.JPanel {
             Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/" + database + "?", user, pass);
             Statement stmt = conn.createStatement();
 
-            ResultSet rs = stmt.executeQuery("SELECT DESARROLLADOR\n"
-                    + "FROM VIDEOJUEGOS\n"
-                    + "GROUP BY DESARROLLADOR\n"
-                    + "HAVING COUNT(GENERO)>=2;");
+            ResultSet rs = stmt.executeQuery("SELECT DISTINCT V.TITULO, V.GENERO\n"
+                    + "FROM VIDEOJUEGOS V, COPIA C, ARRIENDA A\n"
+                    + "WHERE V.ID_VJ=C.ID_VJ\n"
+                    + "AND V.ID_VJ NOT IN\n"
+                    + "(SELECT V.ID_VJ\n"
+                    + "FROM ARRIENDA A1\n"
+                    + "WHERE A1.FEC_ARRIENDO BETWEEN '2017-04-01' AND '2017-04-30'\n"
+                    + "AND A1.ID_COPIA=C.ID_COPIA)\n"
+                    + "AND A.ID_COPIA=C.ID_COPIA\n"
+                    + "GROUP BY V.TITULO, V.GENERO;");
             while (rs.next()) {
-                listModel.addElement(rs.getString(1));
+                listModel.addElement(rs.getString(1) + " - " + rs.getString(2));
             }
             stmt.close();
 

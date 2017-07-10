@@ -100,7 +100,6 @@ public class CRUDSuc extends JPanel {
         refreshButton.setText("ACTUALIZAR");
         refreshButton.addActionListener(formListener);
 
-        newButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectobd/img/NUEVO.png"))); // NOI18N
         newButton.setText("NUEVO");
         newButton.addActionListener(formListener);
 
@@ -139,7 +138,7 @@ public class CRUDSuc extends JPanel {
                                     .addComponent(idSucField)
                                     .addComponent(dirSucField)
                                     .addComponent(telefonoField)))
-                            .addComponent(masterScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 471, Short.MAX_VALUE))))
+                            .addComponent(masterScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
                 .addContainerGap())
         );
 

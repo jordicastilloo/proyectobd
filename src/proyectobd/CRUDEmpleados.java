@@ -126,7 +126,6 @@ public class CRUDEmpleados extends JPanel {
         refreshButton.setText("ACTUALIZAR");
         refreshButton.addActionListener(formListener);
 
-        newButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectobd/img/NUEVO.png"))); // NOI18N
         newButton.setText("NUEVO");
         newButton.addActionListener(formListener);
 
@@ -169,7 +168,7 @@ public class CRUDEmpleados extends JPanel {
                                     .addComponent(cargoField)
                                     .addComponent(sueldoField)
                                     .addComponent(idSucField)))
-                            .addComponent(masterScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 489, Short.MAX_VALUE))))
+                            .addComponent(masterScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
                 .addContainerGap())
         );
 

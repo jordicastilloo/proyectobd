@@ -139,6 +139,7 @@ public class CRUDClientes extends JPanel {
         refreshButton.setText("ACTUALIZAR");
         refreshButton.addActionListener(formListener);
 
+        newButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectobd/img/NUEVO.png"))); // NOI18N
         newButton.setText("NUEVO");
         newButton.addActionListener(formListener);
 

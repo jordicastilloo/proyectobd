@@ -79,7 +79,7 @@
                                   <Component id="telefonoField" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <Component id="masterScrollPane" pref="0" max="32767" attributes="0"/>
+                          <Component id="masterScrollPane" pref="471" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -222,6 +222,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="newButton">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/proyectobd/img/NUEVO.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="NUEVO"/>
       </Properties>
       <Events>

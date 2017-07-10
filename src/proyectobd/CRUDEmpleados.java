@@ -118,15 +118,18 @@ public class CRUDEmpleados extends JPanel {
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ, masterTable, org.jdesktop.beansbinding.ELProperty.create("${selectedElement != null}"), idSucField, org.jdesktop.beansbinding.BeanProperty.create("enabled"));
         bindingGroup.addBinding(binding);
 
+        saveButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectobd/img/guardar.png"))); // NOI18N
         saveButton.setText("GUARDAR");
         saveButton.addActionListener(formListener);
 
+        refreshButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectobd/img/act.png"))); // NOI18N
         refreshButton.setText("ACTUALIZAR");
         refreshButton.addActionListener(formListener);
 
         newButton.setText("NUEVO");
         newButton.addActionListener(formListener);
 
+        deleteButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectobd/img/delet.png"))); // NOI18N
         deleteButton.setText("ELIMINAR");
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ, masterTable, org.jdesktop.beansbinding.ELProperty.create("${selectedElement != null}"), deleteButton, org.jdesktop.beansbinding.BeanProperty.create("enabled"));
@@ -160,12 +163,12 @@ public class CRUDEmpleados extends JPanel {
                                     .addComponent(idSucLabel))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(idEmplField, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)
-                                    .addComponent(nomEmplField, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)
-                                    .addComponent(cargoField, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)
-                                    .addComponent(sueldoField, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)
-                                    .addComponent(idSucField, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)))
-                            .addComponent(masterScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE))))
+                                    .addComponent(idEmplField)
+                                    .addComponent(nomEmplField)
+                                    .addComponent(cargoField)
+                                    .addComponent(sueldoField)
+                                    .addComponent(idSucField)))
+                            .addComponent(masterScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
                 .addContainerGap())
         );
 

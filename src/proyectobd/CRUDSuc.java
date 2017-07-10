@@ -92,15 +92,18 @@ public class CRUDSuc extends JPanel {
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ, masterTable, org.jdesktop.beansbinding.ELProperty.create("${selectedElement != null}"), telefonoField, org.jdesktop.beansbinding.BeanProperty.create("enabled"));
         bindingGroup.addBinding(binding);
 
+        saveButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectobd/img/guardar.png"))); // NOI18N
         saveButton.setText("GUARDAR");
         saveButton.addActionListener(formListener);
 
+        refreshButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectobd/img/act.png"))); // NOI18N
         refreshButton.setText("ACTUALIZAR");
         refreshButton.addActionListener(formListener);
 
         newButton.setText("NUEVO");
         newButton.addActionListener(formListener);
 
+        deleteButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectobd/img/delet.png"))); // NOI18N
         deleteButton.setText("ELIMINAR");
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ, masterTable, org.jdesktop.beansbinding.ELProperty.create("${selectedElement != null}"), deleteButton, org.jdesktop.beansbinding.BeanProperty.create("enabled"));
@@ -132,10 +135,10 @@ public class CRUDSuc extends JPanel {
                                     .addComponent(telefonoLabel))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(idSucField, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
-                                    .addComponent(dirSucField, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
-                                    .addComponent(telefonoField, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)))
-                            .addComponent(masterScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE))))
+                                    .addComponent(idSucField)
+                                    .addComponent(dirSucField)
+                                    .addComponent(telefonoField)))
+                            .addComponent(masterScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
                 .addContainerGap())
         );
 

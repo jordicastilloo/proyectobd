@@ -312,6 +312,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="saveButton">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/proyectobd/img/guardar.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="GUARDAR"/>
       </Properties>
       <Events>
@@ -324,6 +327,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="refreshButton">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/proyectobd/img/act.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="ACTUALIZAR"/>
       </Properties>
       <Events>
@@ -348,6 +354,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="deleteButton">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/proyectobd/img/delet.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="ELIMINAR"/>
       </Properties>
       <BindingProperties>

@@ -76,14 +76,14 @@
                               </Group>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="idEmplField" alignment="0" pref="315" max="32767" attributes="0"/>
-                                  <Component id="nomEmplField" alignment="0" pref="315" max="32767" attributes="0"/>
-                                  <Component id="cargoField" alignment="0" pref="315" max="32767" attributes="0"/>
-                                  <Component id="sueldoField" alignment="0" pref="315" max="32767" attributes="0"/>
-                                  <Component id="idSucField" alignment="0" pref="315" max="32767" attributes="0"/>
+                                  <Component id="idEmplField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="nomEmplField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="cargoField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="sueldoField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="idSucField" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <Component id="masterScrollPane" pref="380" max="32767" attributes="0"/>
+                          <Component id="masterScrollPane" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -240,6 +240,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="saveButton">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/proyectobd/img/guardar.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="GUARDAR"/>
       </Properties>
       <Events>
@@ -252,6 +255,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="refreshButton">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/proyectobd/img/act.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="ACTUALIZAR"/>
       </Properties>
       <Events>
@@ -276,6 +282,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="deleteButton">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/proyectobd/img/delet.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="ELIMINAR"/>
       </Properties>
       <BindingProperties>

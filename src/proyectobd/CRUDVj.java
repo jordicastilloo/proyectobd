@@ -157,15 +157,18 @@ public class CRUDVj extends JPanel {
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ, masterTable, org.jdesktop.beansbinding.ELProperty.create("${selectedElement != null}"), numCopiasField, org.jdesktop.beansbinding.BeanProperty.create("enabled"));
         bindingGroup.addBinding(binding);
 
+        saveButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectobd/img/guardar.png"))); // NOI18N
         saveButton.setText("GUARDAR");
         saveButton.addActionListener(formListener);
 
+        refreshButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectobd/img/act.png"))); // NOI18N
         refreshButton.setText("ACTUALIZAR");
         refreshButton.addActionListener(formListener);
 
         newButton.setText("NUEVO");
         newButton.addActionListener(formListener);
 
+        deleteButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectobd/img/delet.png"))); // NOI18N
         deleteButton.setText("ELIMINAR");
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ, masterTable, org.jdesktop.beansbinding.ELProperty.create("${selectedElement != null}"), deleteButton, org.jdesktop.beansbinding.BeanProperty.create("enabled"));
